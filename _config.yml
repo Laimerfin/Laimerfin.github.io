@@ -88,7 +88,11 @@ service-worker: false
 page-mathjax: false
 
 # 首页「项目」列表（在 index 展示）；按需增删
+# url 以 http 开头为外链（新标签打开），否则为站内路径（同页打开）
 projects:
+  - name: PowerPilot
+    desc: 演示视频与项目介绍（本站独立页面）
+    url: /powerpilot/
   - name: 个人博客（本仓库）
     desc: GitHub Pages 源码与部署
     url: https://github.com/Laimerfin/Laimerfin.github.io

@@ -9,14 +9,18 @@ header-img: img/home-bg.jpg
 {% if _pc > 0 %}
 {% for p in site.projects %}
 <div class="post-preview">
+  {% if p.url contains '://' %}
   <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer">
+  {% else %}
+  <a href="{{ p.url | relative_url }}">
+  {% endif %}
     <h2 class="post-title">{{ p.name }}</h2>
     {% if p.desc %}
     <h3 class="post-subtitle">{{ p.desc }}</h3>
     {% endif %}
-    <div class="post-content-preview">{{ p.url }}</div>
+    <div class="post-content-preview">{% if p.url contains '://' %}{{ p.url }}{% else %}{{ p.url | relative_url }}{% endif %}</div>
   </a>
-  <p class="post-meta">项目链接 · 新窗口打开</p>
+  <p class="post-meta">{% if p.url contains '://' %}外链 · 新窗口打开{% else %}站内页面{% endif %}</p>
 </div>
 <hr>
 {% endfor %}
