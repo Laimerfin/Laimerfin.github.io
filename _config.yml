@@ -91,7 +91,7 @@ page-mathjax: false
 # url 以 http 开头为外链（新标签打开），否则为站内路径（同页打开）
 projects:
   - name: PowerPilot
-    desc: 演示视频与项目介绍（本站独立页面）
+    desc: 功耗感知的高性能计算集群智能管理与 AI 辅助调优
     url: /powerpilot/
   - name: 个人博客（本仓库）
     desc: GitHub Pages 源码与部署

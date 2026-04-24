@@ -1,19 +1,53 @@
 ---
 layout: page
 title: PowerPilot
-description: "项目演示 · 视频"
+description: "功耗预算内最大化集群性能 · 监控分析与 AI 调优一体化"
 permalink: /powerpilot/
 header-img: img/home-bg.jpg
 ---
 
 <div class="post-container">
-  <p>下面是 <strong>PowerPilot</strong> 的演示视频（托管在本站 <code>/videos/</code> 目录）。</p>
+  <p class="lead" style="font-size:1.15em;line-height:1.65;margin-bottom:1.75em;">
+    <strong>PowerPilot</strong> 面向高性能计算（HPC）集群管理员：在<strong>有限功耗预算</strong>内尽可能拉高集群性能，把分散的监控、经验式调优、以及与任务调度脱节的功耗管理，收敛成<strong>一套可对话、可执行</strong>的智能运维体验。
+  </p>
 
-  <video controls playsinline preload="metadata" poster="" style="width:100%;max-width:960px;border-radius:6px;background:#000;">
+  <h2>演示视频</h2>
+  <p>以下为产品演示录像（托管于本站 <code>/videos/</code>）。若播放卡顿，可右键另存为本地观看。</p>
+  <video controls playsinline preload="metadata" style="width:100%;max-width:960px;border-radius:6px;background:#000;margin-bottom:0.5rem;">
     <source src="{{ '/videos/powerpilot.mp4' | relative_url }}" type="video/mp4">
     您的浏览器不支持 HTML5 视频，请直接下载：
     <a href="{{ '/videos/powerpilot.mp4' | relative_url }}">powerpilot.mp4</a>
   </video>
+  <p class="text-muted" style="font-size:0.9em;margin-bottom:2.5rem;">下载：<a href="{{ '/videos/powerpilot.mp4' | relative_url }}">powerpilot.mp4</a></p>
 
-  <p class="text-muted" style="margin-top:1rem;font-size:0.9em;">若播放卡顿，可将文件下载到本地观看。</p>
+  <h2>我们要解决什么问题</h2>
+  <p>
+    集群管理员长期处在几重压力之下：必须在给定的<strong>功耗上限</strong>内把性能「榨干」，却常常面对<strong>监控分散</strong>、<strong>调优依赖个人经验</strong>、以及<strong>功耗观测与任务调度完全脱节</strong>的现实。信息碎片化、决策链条长，导致排障与调参效率低，也难以系统性地回答「多耗一度电、多换来多少有效算力」这类问题。
+  </p>
+
+  <h2>现有方案为什么不够用</h2>
+  <p>
+    <strong>Ganglia、Nagios</strong> 等通用监控工具擅长「看见」指标，却难以贴合 HPC 场景下<strong>功耗—性能—作业</strong>联动的管理需求：它们往往停留在被动展示，缺乏面向集群目标（性能、能效、队列 SLA）的闭环能力。另一方面，<strong>商业 HPC 平台</strong>价格高昂，且多数仍偏重资源编排与报表，在<strong>智能决策与可执行的调优建议</strong>上投入有限，难以让一线管理员「少点熬夜、多点确定性」。
+  </p>
+
+  <h2>PowerPilot 的做法</h2>
+  <p>
+    我们将<strong>实时功耗采集</strong>、<strong>多维可视化分析</strong>、<strong>性能评估</strong>与<strong>AI 辅助调优</strong>整合为同一套产品闭环：管理员不需要在多个控制台之间跳转拼逻辑，而是在统一视图中理解集群「正在耗什么电、跑什么负载、瓶颈在哪」。
+  </p>
+  <p>
+    更进一步，我们提供<strong>自然语言对话</strong>入口：管理员可以用日常语言描述意图与约束，由 AI 理解当前集群状态，<strong>自动生成调优建议</strong>，并在授权后<strong>一键执行</strong>相关操作——目标是让「<strong>说一句话，集群自己优化</strong>」从口号变成可重复的工作流，而不是又一张只读大屏。
+  </p>
+
+  <h2>为用户带来的价值</h2>
+  <p>
+    在不增加硬件投入的前提下，帮助用户<strong>提升资源利用率</strong>、<strong>降低能耗与电费成本</strong>，并把运维从「靠手感」逐步升级为「可解释、可审计、可回放」的过程。相比传统竞品以<strong>被动监控</strong>为主的体验，PowerPilot 强调<strong>主动分析与可执行建议</strong>，缩短从「发现问题」到「验证效果」的路径。
+  </p>
+
+  <h2>落地与传播</h2>
+  <p>
+    我们计划在<strong>实验室集群</strong>快速部署 MVP，以<strong>开源（GitHub）</strong>降低试用门槛；同时通过<strong>ASC 超算竞赛</strong>、<strong>CCF HPC China</strong> 等学术与产业会议触达全国高校 HPC 中心与科研院所，用<strong>技术口碑与可复现案例</strong>驱动扩散，让产品更快进入真实生产与评测环境。
+  </p>
+
+  <hr style="margin:2.5rem 0;">
+  <p class="text-muted" style="font-size:0.9em;">页面内容仅供项目展示；具体能力与路线图以实际发布版本为准。</p>
 </div>
