@@ -1,27 +1,25 @@
 ---
-layout: minimal
+layout: page
 title: 项目
-description: 个人主页 · 项目链接
+description: "个人主页 · 精选仓库与链接"
+header-img: img/home-bg.jpg
 ---
-
-<h1 class="minimal-title">{{ site.title }}</h1>
-<p class="minimal-lead">{{ site.description }}</p>
 
 {% assign _pc = site.projects | size %}
 {% if _pc > 0 %}
-<ul class="project-list">
-  {% for p in site.projects %}
-  <li class="project-item">
-    <a class="project-link" href="{{ p.url }}" target="_blank" rel="noopener noreferrer">
-      <p class="project-name">{{ p.name }}</p>
-      {% if p.desc %}
-      <p class="project-desc">{{ p.desc }}</p>
-      {% endif %}
-      <p class="project-url">{{ p.url }}</p>
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+{% for p in site.projects %}
+<div class="post-preview">
+  <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer">
+    <h2 class="post-title">{{ p.name }}</h2>
+    {% if p.desc %}
+    <h3 class="post-subtitle">{{ p.desc }}</h3>
+    {% endif %}
+    <div class="post-content-preview">{{ p.url }}</div>
+  </a>
+  <p class="post-meta">项目链接 · 新窗口打开</p>
+</div>
+<hr>
+{% endfor %}
 {% else %}
-<p class="minimal-lead">请在 <code>_config.yml</code> 的 <code>projects</code> 中添加你的项目（<code>name</code>、<code>url</code>、可选 <code>desc</code>）。</p>
+<p>请在 <code>_config.yml</code> 的 <code>projects</code> 中添加项目（<code>name</code>、<code>url</code>、可选 <code>desc</code>）。</p>
 {% endif %}
