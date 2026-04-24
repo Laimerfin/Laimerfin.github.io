@@ -7,7 +7,9 @@
 <body ontouchstart="">
 
     {% include nav.html %}
+    {% unless site.hide_search %}
     {% include search.html %}
+    {% endunless %}
 
     {{ content }}
 

@@ -11,12 +11,15 @@ baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 # Publish posts or collection documents with a future date.
 future: true
 
-# SNS settings
+# 极简首页：隐藏顶部搜索图标（首页已不使用 default 布局）
+hide_search: true
+
+# SNS settings（留空则不显示对应图标；旧模板占位已清空）
 RSS: false
-weibo_username: huxpro
-zhihu_username: huxpro
-github_username: huxpro
-twitter_username: huxpro
+weibo_username:
+zhihu_username:
+github_username: Laimerfin
+twitter_username:
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
 
@@ -58,8 +61,8 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-# Disqus settings
-disqus_username: hux
+# Disqus settings（不用评论请留空）
+disqus_username:
 
 # Netease settings
 netease_comment: false
@@ -68,35 +71,34 @@ netease_comment: false
 # Baidu Analytics
 # ba_track_id: [your track id]
 
-# Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+# Google Analytics（不需要统计时请保持为空）
+ga_track_id:
+ga_domain:
 
 # Sidebar settings
-sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta"
-sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar: false
+sidebar-about-description: ""
+sidebar-avatar: https://github.com/Laimerfin.png
 
 # Featured Tags
-featured-tags: true # whether or not using Feature-Tags
+featured-tags: false
 featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
 
 # Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
+chrome-tab-theme-color: "#f6f7f9"
+service-worker: false
 
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
 
-# Friends
-friends:
-  [
-    { title: "a", href: "http://mida.re/" },
-    { title: "b", href: "https://ebnbin.dev/" },
-    { title: "c", href: "http://kunq.me" },
-    { title: "d", href: "https://sherrywoo.me/" },
-    { title: "e: "http://blog.smdcn.net" },
-    { title: "f", href: "http://tiye.me/" },
-    { title: "g", href: "http://dhong.co" },
-    { title: "h", href: "http://ingf.github.io/" },
-  ]
+# 首页「项目」列表（在 index 展示）；按需增删
+projects:
+  - name: 个人博客（本仓库）
+    desc: GitHub Pages 源码与部署
+    url: https://github.com/Laimerfin/Laimerfin.github.io
+  - name: GitHub 主页
+    desc: 更多仓库与代码
+    url: https://github.com/Laimerfin
+
+# Friends（侧边栏友情链接；已关闭 sidebar 时通常不展示）
+friends: []
